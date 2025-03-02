@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Anurag Anand</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header class="MyIdentity" id="MyIdentity">
+		<h1 class="MyName" id="MyName">Anurag Anand (अनुराग आनंद)</h1>
+	</header>
+	<section class="MyProfession" id="MyProfession">
+		<h1 class="MyProfessionName">Software Engineer</h1>
+		<h1 class="MyProfessionYearsOfExperience">10<span class="Plus">+</span> Years</h1>
+	</section>
+	<section class="MyLinks" id="MySocials">
+		<header><h4>My Socials</h4></header>
+		<main class="Link" id="MySocialsLinks">
+			<a target="_blank" href="https://www.linkedin.com/in/refactoredcodes/">LinkedIn ↗</a>
+			<a target="_blank" href="https://www.youtube.com/@refactoredcodes">YouTube ↗</a>
+			<a target="_blank" href="https://github.com/anuraganand789">GitHub ↗</a>
+		</main>
+	</section>
+	<section class="MyLinks" id="MyWebsites">
+		<header><h4>My Websites</h4></header>
+		<main class="Link" id="MyWebsitesLinks">
+			<a target="_blank" href="https://refactoredcodes.com" data-href="refarctoredcodes.com">Tech Blog↗</a>
+			<a target="_blank" href="https://mydevutils.com" data-href="mydevutil.com">Tools ↗</a>
+		</main>
+	</section>
+	<section class="MySkills" id="MySkills">
+		<header>
+			<h4>I Know</h4>
+		</header>
+		<main class="MySkill" id="MySkill">
+			<span class="IKnow">Java</span>
+			<span class="IKnow">Spring Boot</span>
+			<span class="IKnow">ThymeLeaf</span>
+			<span class="IKnow">Hibernate</span>
+			<span class="IKnow">Datastructures</span>
+			<span class="IKnow">Algorithms</span>
+			<span class="IKnow">Html</span>
+			<span class="IKnow">CSS</span>
+			<span class="IKnow">Javascript</span>
+			<span class="IKnow">VueJS</span>
+			<span class="IKnow">Postgres</span>
+			<span class="IKnow">System Design</span>
+			<span class="IKnow">Concurrency</span>
+			<span class="IKnow">Kafka</span>
+			<span class="IKnow">Powershell</span>
+			<span class="IKnow">MongoDB</span>
+		</main>
+	</section>
+	<section class="MyProjects" id="MyProjects" style="color: white; font-size: 8rem;">
+		Add projects here...
+	</section>
+</body>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+		border: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		min-height: 100vh;
+		background-color: black;
+		font-family: Delius Unicase, sans-serif;
+		font-size: 10px;
+		display: flex;
+		flex-direction: column;
+		border: 1px solid white;
+		margin: 2px;
+	}
+
+	.MyIdentity {
+		color: white;
+		display: flex;
+		justify-content: center;
+		height: 10vh;
+		align-items: center;
+		& h1.MyName {
+			font-size: 1.6rem;
+		}
+	}
+
+	section.MyProfession{
+		color: white;
+		font-size: 4rem;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		container: MyProfession size;
+
+		& .MyProfessionName{
+			width: 100%;
+			color : yellow;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		& .MyProfessionYearsOfExperience{
+			margin-top: 2.4rem;
+			width: 100%;
+			color: red;
+			text-align: center;
+			cursor: pointer;
+			display: flex;
+			font-size: .8em;
+			display: flex;
+			justify-content: center;
+
+			& span.Plus{
+				transform: rotateX(720deg);
+			}
+
+			&:hover span.Plus {
+				transition-duration: .5s;
+				transform: rotateX(0deg);
+			}
+		}
+	}
+
+	section.MyLinks{
+		display: flex;
+		margin-top: 2.4rem;
+		justify-content: center;
+		flex-direction: column;
+
+			&:hover header h4{
+				text-shadow: 2px 2px 8px white;
+			}
+		& header{
+			color: white;
+			font-size: 1.8rem;
+			align-items: center;
+			display: flex;
+			justify-content: center;
+
+		}
+
+		& .Link{
+			display: flex;
+			justify-content: center;
+
+			& a {
+				text-decoration: none;
+				font-size: 1.6rem;
+				padding: 1rem;
+				display: flex;
+				align-items: center;
+			  color: white;
+
+				&:hover {
+					color: blue;
+					text-decoration: underline;
+				}
+
+				&:active{
+					color: blue;
+					text-shadow: 1px 1px 2px blue;
+				}
+
+				&:visited{
+					color: gray;
+				}
+			}
+		}
+	}
+
+	.MySkills{
+		margin-top: 1rem;
+		color: white;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		& header {
+			display: flex;
+			justify-content: center;
+			font-size: 2.4rem;
+			color: red;
+		}
+
+		& .MySkill {
+			margin-top: 1rem;
+			display: grid;
+			width: max-content;
+			grid-template-columns: repeat(4, 1fr);
+			row-gap: .8rem;
+			& .IKnow{
+				font-size: 1rem;
+				margin-left: .8rem;
+			}
+		}
+	}
+
+</style>
+</html>
