@@ -54,9 +54,6 @@
 			<span class="IKnow">MongoDB</span>
 		</main>
 	</section>
-	<section class="MyProjects" id="MyProjects" style="color: white; font-size: 8rem;">
-		Add projects here...
-	</section>
 </body>
 <style>
 	*{
@@ -66,15 +63,17 @@
 		box-sizing: border-box;
 	}
 
+	html{
+		font-family: Delius Unicase, sans-serif;
+		font-size: 10px;
+	}
+
 	body {
 		min-height: 100vh;
 		background-color: black;
-		font-family: Delius Unicase, sans-serif;
-		font-size: 10px;
 		display: flex;
 		flex-direction: column;
-		border: 1px solid white;
-		margin: 2px;
+		container: Body / size;
 	}
 
 	.MyIdentity {
@@ -84,17 +83,21 @@
 		height: 10vh;
 		align-items: center;
 		& h1.MyName {
-			font-size: 1.6rem;
+			font-size: 2.4rem;
+			@container Body (width < 500px) {
+				font-size: 1.8rem;
+			}
+			@container Body (width < 400px) {
+				font-size: 1.6rem;
+			}
 		}
 	}
 
-	section.MyProfession{
+	section.MyProfession {
 		color: white;
-		font-size: 4rem;
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		container: MyProfession size;
 
 		& .MyProfessionName{
 			width: 100%;
@@ -102,6 +105,38 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			font-size: 14rem;
+
+			@container Body (width < 1700px) {
+				font-size: 12rem;
+			}
+			@container Body (width < 1450px) {
+				font-size: 10rem;
+			}
+			@container Body (width < 1200px) {
+				font-size: 8rem;
+			}
+			@container Body (width < 1000px) {
+				font-size: 7.2rem;
+			}
+			@container Body (width < 950px) {
+				font-size: 6.4rem;
+			}
+			@container Body (width < 850px) {
+				font-size: 5.9rem;
+			}
+			@container Body (width < 700px) {
+				font-size: 4.8rem;
+			}
+			@container Body (width < 600px) {
+				font-size: 4rem;
+			}
+			@container Body (width < 500px) {
+				font-size: 3.2rem;
+			}
+			@container Body (width < 400px) {
+				font-size: 2.8rem;
+			}
 		}
 
 		& .MyProfessionYearsOfExperience{
@@ -111,17 +146,32 @@
 			text-align: center;
 			cursor: pointer;
 			display: flex;
-			font-size: .8em;
-			display: flex;
 			justify-content: center;
+			font-size: 8rem;
+
+			@container Body (width < 1450px) {
+				font-size: 7.2rem;
+			}
+			@container Body (width < 1200px) {
+				font-size: 5.6rem;
+			}
+			@container Body (width < 1000px) {
+				font-size: 4rem;
+			}
+			@container Body (width < 700px) {
+				font-size: 3.2rem;
+			}
+			@container Body (width < 400px) {
+				font-size: 2.4rem;
+			}
 
 			& span.Plus{
-				transform: rotateX(720deg);
+				transform: rotate(720deg);
 			}
 
 			&:hover span.Plus {
 				transition-duration: .5s;
-				transform: rotateX(0deg);
+				transform: rotate(320deg);
 			}
 		}
 	}
@@ -132,16 +182,26 @@
 		justify-content: center;
 		flex-direction: column;
 
-			&:hover header h4{
-				text-shadow: 2px 2px 8px white;
-			}
+		&:hover header h4{
+			text-shadow: 2px 2px 8px white;
+		}
+
 		& header{
 			color: white;
-			font-size: 1.8rem;
+			font-size: 3rem;
 			align-items: center;
 			display: flex;
 			justify-content: center;
 
+			@container Body (width < 1000px) {
+				font-size: 2.4rem;
+			}
+			@container Body (width < 400px) {
+				font-size: 1.7rem;
+			}
+			@container Body (width < 400px) {
+				font-size: 1.6rem;
+			}
 		}
 
 		& .Link{
@@ -150,11 +210,21 @@
 
 			& a {
 				text-decoration: none;
-				font-size: 1.6rem;
+				font-size: 2.4rem;
 				padding: 1rem;
 				display: flex;
 				align-items: center;
 			  color: white;
+
+				@container Body (width < 1000px) {
+					font-size: 1.8rem;
+				}
+				@container Body (width < 500px) {
+					font-size: 1.4rem;
+				}
+				@container Body (width < 400px) {
+					font-size: 1.2rem;
+				}
 
 				&:hover {
 					color: blue;
@@ -180,11 +250,27 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		font-size: 8rem;
+
+		@container Body (width < 1450px) {
+			font-size: 7.2rem;
+		}
+		@container Body (width < 1200px) {
+			font-size: 5.6rem;
+		}
+		@container Body (width < 1000px) {
+			font-size: 4rem;
+		}
+		@container Body (width < 700px) {
+			font-size: 3.2rem;
+		}
+		@container Body (width < 500px) {
+			font-size: 3rem;
+		}
 
 		& header {
 			display: flex;
 			justify-content: center;
-			font-size: 2.4rem;
 			color: red;
 		}
 
@@ -194,9 +280,30 @@
 			width: max-content;
 			grid-template-columns: repeat(4, 1fr);
 			row-gap: .8rem;
+
+			@container Body (width < 700px) {
+				grid-template-columns: repeat(2, 1fr);
+				row-gap: 1.6rem;
+			}
+			@container Body (width < 400px) {
+				font-size: 1.2rem;
+			}
+
 			& .IKnow{
-				font-size: 1rem;
-				margin-left: .8rem;
+				font-size: 1.8rem;
+				margin-left: 1.6rem;
+				cursor: pointer;
+
+				@container Body (width < 1000px) {
+					font-size: 1.4rem;
+				}
+				@container Body (width < 700px) {
+					font-size: 1.2rem;
+				}
+
+				&:hover{
+					color: yellow;
+				}
 			}
 		}
 	}
